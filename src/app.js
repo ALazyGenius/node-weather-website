@@ -6,6 +6,7 @@ const geoCode = require("./utils/geoCode.js");
 const foreCast = require("./utils/foreCast.js");
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 //Define paths for expess config
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -93,8 +94,8 @@ app.get("*", (req, res) => {
 });
 
 //Start the server - with port number and a callback
-app.listen(3000, () => {
-  console.log("Server started on port 3000");
+app.listen(port, () => {
+  console.log("Server started on port " + port);
 });
 
 //http://localhost:3000

@@ -4,7 +4,7 @@ const message1 = document.querySelector("#message-1");
 const message2 = document.querySelector("#message-2");
 
 const serviceCall = (address) => {
-  const url = `http://localhost:3000/weather?address=${address}`;
+  const url = `/weather?address=${address}`;
   const promise = fetch(url);
   promise.then((response) => {
     response.json().then((data) => {
